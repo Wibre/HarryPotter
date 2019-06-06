@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>КВЕСТ</title>
+    </head>
+    <body>
+        <div class="container doorSS">
+            <img src="door.png" class="col-3 door1">
+            <img src="door2.png" class="col-3 door2">
+            <img src="door3.png" class="col-3 door3">
+        </div>
+
+        <!-- 1 КВЕСТ -->
+        <div class="garry" style="background-image: url(bg.jpg); display: none; height: 755px;">
+            <div class="p-3">
+                <h1 class="text-white">НАЙДИТЕ МАНТИЮ, МЕТЛУ И ПАЛОЧКУ</h1>
+                <h1 class="text-white">ОЧКИ: <span class="score">0</span></h1>
+                <button class="btn1 btn btn-info">Выйти из квеста</button>
+            </div>
+
+            <img src="gun.png" style="height: 50px; width: 50px; margin-left: 100px; margin-top: 500px; position: absolute;">
+            <img class="mantiya" src="mantiya.png" style="height: 50px; width: 200px;  margin-left: 900px; margin-top: 300px; position: absolute;">
+            <img class="metla" src="metla.png" style="height: 50px; width: 50px;  margin-left: 1200px; margin-top: 500px; position: absolute;">
+            <img class="palochka" src="palochka.png" style="height: 50px; width: 50px;  margin-left: 400px; margin-top: 50px; position: absolute;">
+            <img src="ring.png" style="height: 50px; width: 50px;  margin-left: 440px; margin-top: 500px; position: absolute;">
+        </div>
+
+        <!-- 2 КВЕСТ -->
+        <div class="lishn" style="background-image: url(bg2.png); display: none; height: 753px;">
+            <div class="p-3">
+                <h1 class="text-white">НАЙДИ ЛИШНЮЮ ВЕЩЬ</h1>
+                <h1 class="text-white">ОЧКИ: <span class="score2">0</span></h1>
+                <button class="btn2 btn btn-success">Выйти из квеста</button>
+
+                <div class="l1">
+                    <img src="cola.jpg" style="height: 90px; width: 80px; margin-left: 40px; margin-top: 100px; position: absolute;">
+                    <img src="fanta.jpg" style="height: 90px; width: 80px;  margin-left: 310px; margin-top: 100px; position: absolute;">
+                    <img class="pulpy" src="palpy.jpg" style="height: 90px; width: 80px;  margin-left: 220px; margin-top: 100px; position: absolute;">
+                    <img src="pepsi.jpg" style="height: 90px; width: 50px;  margin-left: 140px; margin-top: 100px; position: absolute;">
+                </div>
+
+                <div class="l2" style="display: none">
+                    <img src="korowa.png" style="height: 90px; width: 80px; margin-left: 120px; margin-top: 100px; position: absolute;">
+                    <img src="svin.png" style="height: 90px; width: 80px;  margin-left: 310px; margin-top: 100px; position: absolute;">
+                    <img class="okor" src="okor.png" style="height: 90px; width: 80px;  margin-left: 220px; margin-top: 100px; position: absolute;">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3 КВЕСТ -->
+        <div class="tar" style="display: none">
+            <div class="p-3">
+                <h1 class="text-danger">УБЕЙ ТАРАКАНОВ</h1>
+                <button class="btn3 btn btn-danger">Выйти из квеста</button>
+            </div>
+
+            <img class="tar1" src="tar.png" style="height: 50px; width: 50px; margin-left: 100px; margin-top: 500px; position: absolute;">
+            <img class="tar2" src="tar.png" style="height: 50px; width: 200px;  margin-left: 900px; margin-top: 300px; position: absolute;">
+            <img class="tar3" src="tar.png" style="height: 50px; width: 50px;  margin-left: 1200px; margin-top: 500px; position: absolute;">
+        </div>
+
+
+
+        <script type="text/javascript">
+
+                    // 1 КВЕСТ
+            let score = document.querySelector("score");
+
+            document.querySelector(".door1").onclick = function() {
+                alert("Вы вошли в первый квест!");
+                document.querySelector(".doorSS").style.display = "none";
+                document.querySelector(".garry").style.display = "block";
+            }
+
+            document.querySelector(".btn1").onclick = function() {
+                document.querySelector(".garry").style.display = "none";
+                document.querySelector(".doorSS").style.display = "block";
+            }
+
+            document.querySelector(".mantiya").onclick = function() {
+                score = document.querySelector(".score").innerHTML = score + 1;
+                document.querySelector(".mantiya").style.display = "none";
+            }
+
+            document.querySelector(".metla").onclick = function() {
+                score = document.querySelector(".score").innerHTML = score + 1;
+                document.querySelector(".metla").style.display = "none";
+            }
+
+            document.querySelector(".palochka").onclick = function() {
+                score = document.querySelector(".score").innerHTML = score + 1;
+                document.querySelector(".palochka").style.display = "none";
+            }
+
+
+                    // 2 КВЕСТ
+            let score2 = document.querySelector("score2");
+
+            document.querySelector(".door2").onclick = function() {
+                alert("Вы вошли во второй квест!");
+                document.querySelector(".doorSS").style.display = "none";
+                document.querySelector(".lishn").style.display = "block";
+            }
+
+            document.querySelector(".btn2").onclick = function() {
+                document.querySelector(".lishn").style.display = "none";
+                document.querySelector(".doorSS").style.display = "block";
+            }
+
+            document.querySelector(".pulpy").onclick = function() {
+                score2 = document.querySelector(".score2").innerHTML = score2 + 1;
+                document.querySelector(".pulpy").style.display = "none";
+                alert("Поздравляю! ты нашел лишнюю вещь! Теперь попробуй найти следующюю лишнюю вещь");
+                document.querySelector(".l1").style.display = "none";
+                document.querySelector(".l2").style.display = "block";
+            }
+
+            document.querySelector(".okor").onclick = function() {
+                score2 = document.querySelector(".score2").innerHTML = score2 + 1;
+                alert("Поздравляю! Ты прошел!")
+            }
+
+                    // 3 КВЕСТ
+            document.querySelector(".door3").onclick = function() {
+                alert("Вы вошли в третий квест!");
+                document.querySelector(".doorSS").style.display = "none";
+                document.querySelector(".tar").style.display = "block";
+            }
+
+            document.querySelector(".btn3").onclick = function() {
+                document.querySelector(".tar").style.display = "none";
+                document.querySelector(".doorSS").style.display = "block";
+            }
+
+            document.querySelector(".tar1").onclick = function() {
+                document.querySelector(".tar1").style.display = "none";
+            }
+
+            document.querySelector(".tar2").onclick = function() {
+                document.querySelector(".tar2").style.display = "none";
+            }
+
+            document.querySelector(".tar3").onclick = function() {
+                document.querySelector(".tar3").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
